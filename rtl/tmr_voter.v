@@ -15,14 +15,15 @@
 //     and self-healing feedback mechanisms.
 // =============================================================================
 
+(* DONT_TOUCH = "TRUE" *)
 module tmr_voter #(
     parameter WIDTH = 1
 )(
     input  wire [WIDTH-1:0] a,
     input  wire [WIDTH-1:0] b,
     input  wire [WIDTH-1:0] c,
-    output wire [WIDTH-1:0] y,
-    output wire             mismatch
+    (* DONT_TOUCH = "TRUE" *) output wire [WIDTH-1:0] y,
+    (* DONT_TOUCH = "TRUE" *) output wire             mismatch
 );
 
     // Bitwise majority function: (a AND b) OR (b AND c) OR (a AND c)

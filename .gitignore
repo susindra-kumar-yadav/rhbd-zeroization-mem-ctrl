@@ -6,3 +6,10 @@
 *.pb
 xsim.dir/
 .Xil/
+webtalk*
+rhbd_mem_ctrl.cache/
+rhbd_mem_ctrl.hw/
+rhbd_mem_ctrl.ip_user_files/
+rhbd_mem_ctrl.sim/
+rhbd_mem_ctrl.runs/
+*.xpr

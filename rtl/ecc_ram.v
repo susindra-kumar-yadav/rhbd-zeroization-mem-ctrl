@@ -4,45 +4,51 @@
 // Project:     Radiation-Hardened-by-Design (RHBD) Memory Controller
 // Target:      Xilinx Artix-7 FPGA (Vivado 2026.2) / Icarus Verilog
 // Standards:   Verilog-2001
-// Description: Synchronous Block RAM with SECDED-width data words (13-bit)
-//              and built-in SEU fault injection capability.
+// Description: Synchronous Block RAM with parameterized codeword width (CW)
+//              and physical SEU fault injection capability.
+//
+// Parameters:
+//   - CW          : Total codeword bit width (default 18 for DEC-TED ECC)
+//   - DW          : Alias for CW to maintain compatibility with legacy parameter naming
+//   - AW          : Memory address width (default 8 = 256 words)
 //
 // Ports:
 //   - clk         : System clock
 //   - we          : Synchronous write enable
 //   - addr        : AW-bit memory address
-//   - din         : DW-bit codeword data input
-//   - dout        : DW-bit registered codeword data output (1 cycle latency)
+//   - din         : CW-bit codeword data input
+//   - dout        : CW-bit registered codeword data output (1 cycle latency)
 //   - inject_en   : Fault injection enable (active when we = 0)
-//   - inject_mask : DW-bit XOR mask for flipping target bit(s) in memory
+//   - inject_mask : CW-bit XOR mask for flipping target bit(s) in physical memory
 // =============================================================================
 
 module ecc_ram #(
-    parameter DW = 13,
+    parameter CW = 18,
+    parameter DW = CW,
     parameter AW = 8
 )(
     input  wire          clk,
     input  wire          we,
     input  wire [AW-1:0] addr,
-    input  wire [DW-1:0] din,
-    output reg  [DW-1:0] dout,
+    input  wire [CW-1:0] din,
+    output reg  [CW-1:0] dout,
     input  wire          inject_en,
-    input  wire [DW-1:0] inject_mask
+    input  wire [CW-1:0] inject_mask
 );
 
-    // Memory array definition: 2^AW words of DW bits
-    reg [DW-1:0] mem [(1<<AW)-1:0];
+    // Physical memory array: 2^AW words of CW bits
+    reg [CW-1:0] mem [(1<<AW)-1:0];
 
-    // Initialize all memory locations and output to zero
+    // Initialize all memory locations and output register to all zeros
     integer i;
     initial begin
         for (i = 0; i < (1<<AW); i = i + 1) begin
-            mem[i] = {DW{1'b0}};
+            mem[i] = {CW{1'b0}};
         end
-        dout = {DW{1'b0}};
+        dout = {CW{1'b0}};
     end
 
-    // Synchronous write / fault-injection / read process
+    // Synchronous write / registered read / physical SEU fault injection
     always @(posedge clk) begin
         if (we) begin
             mem[addr] <= din;
@@ -53,4 +59,3 @@ module ecc_ram #(
     end
 
 endmodule
-

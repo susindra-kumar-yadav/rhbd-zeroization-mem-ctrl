@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="13.145001 us"></ZoomEndTime>
+      <Cursor1Time time="6.060395 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="254"></NameColumnWidth>
+      <ValueColumnWidth column_width="117"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="56" />
+   <wvobject fp_name="/tb_top/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/req_wr" type="logic">
+      <obj_property name="ElementShortName">req_wr</obj_property>
+      <obj_property name="ObjectShortName">req_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/req_rd" type="logic">
+      <obj_property name="ElementShortName">req_rd</obj_property>
+      <obj_property name="ObjectShortName">req_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/host_addr" type="array">
+      <obj_property name="ElementShortName">host_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">host_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/host_wdata" type="array">
+      <obj_property name="ElementShortName">host_wdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">host_wdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/host_rdata" type="array">
+      <obj_property name="ElementShortName">host_rdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">host_rdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/rdata_valid" type="logic">
+      <obj_property name="ElementShortName">rdata_valid</obj_property>
+      <obj_property name="ObjectShortName">rdata_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/tamper" type="logic">
+      <obj_property name="ElementShortName">tamper</obj_property>
+      <obj_property name="ObjectShortName">tamper</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/inject_en" type="logic">
+      <obj_property name="ElementShortName">inject_en</obj_property>
+      <obj_property name="ObjectShortName">inject_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/inject_addr" type="array">
+      <obj_property name="ElementShortName">inject_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inject_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/inject_mask" type="array">
+      <obj_property name="ElementShortName">inject_mask[12:0]</obj_property>
+      <obj_property name="ObjectShortName">inject_mask[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/fsm_fault_inject" type="array">
+      <obj_property name="ElementShortName">fsm_fault_inject[2:0]</obj_property>
+      <obj_property name="ObjectShortName">fsm_fault_inject[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/single_err_seen" type="logic">
+      <obj_property name="ElementShortName">single_err_seen</obj_property>
+      <obj_property name="ObjectShortName">single_err_seen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/double_err_seen" type="logic">
+      <obj_property name="ElementShortName">double_err_seen</obj_property>
+      <obj_property name="ObjectShortName">double_err_seen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/tmr_mismatch" type="logic">
+      <obj_property name="ElementShortName">tmr_mismatch</obj_property>
+      <obj_property name="ObjectShortName">tmr_mismatch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/zeroize_busy" type="logic">
+      <obj_property name="ElementShortName">zeroize_busy</obj_property>
+      <obj_property name="ObjectShortName">zeroize_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/zeroize_done" type="logic">
+      <obj_property name="ElementShortName">zeroize_done</obj_property>
+      <obj_property name="ObjectShortName">zeroize_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/zeroize_fail" type="logic">
+      <obj_property name="ElementShortName">zeroize_fail</obj_property>
+      <obj_property name="ObjectShortName">zeroize_fail</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/corrected_count" type="array">
+      <obj_property name="ElementShortName">corrected_count[15:0]</obj_property>
+      <obj_property name="ObjectShortName">corrected_count[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uncorrectable_count" type="array">
+      <obj_property name="ElementShortName">uncorrectable_count[15:0]</obj_property>
+      <obj_property name="ObjectShortName">uncorrectable_count[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/pass_count" type="array">
+      <obj_property name="ElementShortName">pass_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pass_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/fail_count" type="array">
+      <obj_property name="ElementShortName">fail_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fail_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/rdata" type="array">
+      <obj_property name="ElementShortName">rdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/s_flag" type="logic">
+      <obj_property name="ElementShortName">s_flag</obj_property>
+      <obj_property name="ObjectShortName">s_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/d_flag" type="logic">
+      <obj_property name="ElementShortName">d_flag</obj_property>
+      <obj_property name="ObjectShortName">d_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/prev_corr_count" type="array">
+      <obj_property name="ElementShortName">prev_corr_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_corr_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/req_wr" type="logic">
+      <obj_property name="ElementShortName">req_wr</obj_property>
+      <obj_property name="ObjectShortName">req_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/req_rd" type="logic">
+      <obj_property name="ElementShortName">req_rd</obj_property>
+      <obj_property name="ObjectShortName">req_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/host_addr" type="array">
+      <obj_property name="ElementShortName">host_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">host_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/host_wdata" type="array">
+      <obj_property name="ElementShortName">host_wdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">host_wdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/host_rdata" type="array">
+      <obj_property name="ElementShortName">host_rdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">host_rdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/rdata_valid" type="logic">
+      <obj_property name="ElementShortName">rdata_valid</obj_property>
+      <obj_property name="ObjectShortName">rdata_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/tamper" type="logic">
+      <obj_property name="ElementShortName">tamper</obj_property>
+      <obj_property name="ObjectShortName">tamper</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/inject_en" type="logic">
+      <obj_property name="ElementShortName">inject_en</obj_property>
+      <obj_property name="ObjectShortName">inject_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/inject_addr" type="array">
+      <obj_property name="ElementShortName">inject_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inject_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/inject_mask" type="array">
+      <obj_property name="ElementShortName">inject_mask[12:0]</obj_property>
+      <obj_property name="ObjectShortName">inject_mask[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/fsm_fault_inject" type="array">
+      <obj_property name="ElementShortName">fsm_fault_inject[2:0]</obj_property>
+      <obj_property name="ObjectShortName">fsm_fault_inject[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/single_err_seen" type="logic">
+      <obj_property name="ElementShortName">single_err_seen</obj_property>
+      <obj_property name="ObjectShortName">single_err_seen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/double_err_seen" type="logic">
+      <obj_property name="ElementShortName">double_err_seen</obj_property>
+      <obj_property name="ObjectShortName">double_err_seen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/tmr_mismatch" type="logic">
+      <obj_property name="ElementShortName">tmr_mismatch</obj_property>
+      <obj_property name="ObjectShortName">tmr_mismatch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/zeroize_busy" type="logic">
+      <obj_property name="ElementShortName">zeroize_busy</obj_property>
+      <obj_property name="ObjectShortName">zeroize_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/zeroize_done" type="logic">
+      <obj_property name="ElementShortName">zeroize_done</obj_property>
+      <obj_property name="ObjectShortName">zeroize_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/zeroize_fail" type="logic">
+      <obj_property name="ElementShortName">zeroize_fail</obj_property>
+      <obj_property name="ObjectShortName">zeroize_fail</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/corrected_count" type="array">
+      <obj_property name="ElementShortName">corrected_count[15:0]</obj_property>
+      <obj_property name="ObjectShortName">corrected_count[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uncorrectable_count" type="array">
+      <obj_property name="ElementShortName">uncorrectable_count[15:0]</obj_property>
+      <obj_property name="ObjectShortName">uncorrectable_count[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/pass_count" type="array">
+      <obj_property name="ElementShortName">pass_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pass_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/fail_count" type="array">
+      <obj_property name="ElementShortName">fail_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fail_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/rdata" type="array">
+      <obj_property name="ElementShortName">rdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/s_flag" type="logic">
+      <obj_property name="ElementShortName">s_flag</obj_property>
+      <obj_property name="ObjectShortName">s_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/d_flag" type="logic">
+      <obj_property name="ElementShortName">d_flag</obj_property>
+      <obj_property name="ObjectShortName">d_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/prev_corr_count" type="array">
+      <obj_property name="ElementShortName">prev_corr_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_corr_count[31:0]</obj_property>
+   </wvobject>
+</wave_config>

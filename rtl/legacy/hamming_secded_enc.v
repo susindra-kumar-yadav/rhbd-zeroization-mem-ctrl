@@ -1,5 +1,4 @@
 `timescale 1ns / 1ps
-// =============================================================================
 // File:        hamming_secded_enc.v
 // Project:     Radiation-Hardened-by-Design (RHBD) Memory Controller
 // Target:      Xilinx Artix-7 FPGA (Vivado 2026.2) / Icarus Verilog
@@ -24,14 +23,11 @@
 //
 // Key Property:
 //   data = 8'h00 -> code = 13'h0000 (essential for secure memory zeroization).
-// =============================================================================
 
 module hamming_secded_enc (
     input  wire [7:0]  data,
     output wire [12:0] code
 );
-
-    // -------------------------------------------------------------------------
     // Hamming Parity Generation (Even Parity)
     // -------------------------------------------------------------------------
     // Parity bits cover 1-indexed bit positions whose binary indices have 1 in
@@ -50,8 +46,6 @@ module hamming_secded_enc (
     wire p0 = p1 ^ p2 ^ data[0] ^ p4 ^ data[1] ^ data[2] ^ data[3] ^
               p8 ^ data[4] ^ data[5] ^ data[6] ^ data[7];
 
-    // -------------------------------------------------------------------------
-    // Codeword Assembly
     // -------------------------------------------------------------------------
     assign code[0]  = p0;
     assign code[1]  = p1;
